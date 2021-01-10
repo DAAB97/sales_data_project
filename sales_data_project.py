@@ -16,7 +16,7 @@ df = pd.read_csv('C:/Users/abdo/Desktop/sales_data.csv')
 for cat in df.columns:
     print(cat, df[cat].unique())
     
-    
+## replacing all unknown data from gender, age and child with null  
 df['gender'] = df.gender.replace('U', np.NaN)
 df['age'] = df.age.replace('1_Unk', np.NaN)
 df['child'] = df.child.replace('U', np.NaN)
